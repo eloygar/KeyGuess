@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <input type="text" id="numero">
+        <input type="button" value="Capturar" onclick="Print()">
+    <p id="demo"></p>
+    </p>
+
+</body>
+
+<script>
+
+
+    
+    var Capturar = function () {
+        var array = document.getElementById("numero").value.toString().split('');
+
+
+        for (var i = 0; i < array.length; i++) {
+            console.log(array[i]);//Aquí puedes procesar cada valor del array
+        }
+        return array;
+    }
+
+    var Print = function (){
+        var array = Capturar();
+        document.getElementById("demo").textContent = array.toString();
+        console.log(array);
+
+    }
+    
+
+
+
+
+</script>
+
+</html>
